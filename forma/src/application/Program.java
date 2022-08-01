@@ -27,7 +27,7 @@ public class Program {
 			System.out.print("Rectangle or Circle (r/c)? ");
 			char resp = in.next().charAt(0);
 			System.out.print("Color (BLAC/BLUE/RED): ");
-			String color = in.next();
+			Color color = Color.valueOf(in.next());
 
 			if (resp == 'r' || resp == 'R') {
 				System.out.print("Width: ");
@@ -35,11 +35,11 @@ public class Program {
 				System.out.print("Height: ");
 				double height = in.nextDouble();
 				
-				list.add(new Rectangle(Color.valueOf(color), width, height));
+				list.add(new Rectangle(color, width, height));
 			} else {
 				System.out.print("Radius: ");
 				double radius = in.nextDouble();
-				list.add(new Circle(Color.valueOf(color), radius));
+				list.add(new Circle(color, radius));
 			}
 
 		}
